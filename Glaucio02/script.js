@@ -6,25 +6,27 @@ os seguintes resultados:
 - O número de mulheres;
 */
 let Pessoa1 = {
-    altura: "",
-    sexo: "",
+    altura: 178,
+    sexo: "H",
 
 }
 
 let Pessoa2 = {
-    altura: "",
-    sexo: "",
+    altura: 179,
+    sexo: "M",
 
 }
 
 let Pessoa3 = {
-    altura: "",
-    sexo: "",
+    altura: 167,
+    sexo: "H",
 
 }
 
 Homens = [];
+Mulheres = [];
 AlturasMasc = [];
+AlturasGeral = [];
 
 function maxHeight() {
     return max(Pessoa1.altura, Pessoa2.altura, Pessoa3.altura)
@@ -35,12 +37,30 @@ const separar = () => {
         Homens.push(Pessoa1);
     }
 
+    if (Pessoa1.sexo === "M") {
+        Mulheres.push(Pessoa1)
+    }
+
     if (Pessoa2.sexo === "H") {
         Homens.push(Pessoa2);
     }
 
+    if (Pessoa2.sexo === "M") {
+        Mulheres.push(Pessoa2)
+    }
+
     if (Pessoa3.sexo === "H") {
         Homens.push(Pessoa3);
+    }
+
+    if (Pessoa3.sexo === "M") {
+        Mulheres.push(Pessoa3)
+    }
+}
+
+const penerar = () => {
+    for (let i = 0; i < Homens.lenght; i++) {
+        AlturasMasc.append(Homens[i.altura])
     }
 }
 
@@ -55,15 +75,16 @@ function media() {
 
 
 
-Pessoa1.altura = prompt("Qual é a altura da primeira pessoa ? ");
+/*Pessoa1.altura = prompt("Qual é a altura da primeira pessoa ? ");
 Pessoa1.sexo = prompt("E o sexo ?");
 
 Pessoa2.altura = prompt("Qual é a altura da segunda pessoa ? ");
 Pessoa2.sexo = prompt("E o sexo ?");
 
 Pessoa3.altura = prompt("Qual é a altura da terceira pessoa ? ");
-Pessoa3.sexo = prompt("E o sexo ?");
+Pessoa3.sexo = prompt("E o sexo ?"); */
 
 separar();
 console.log(Homens);
-console.log(media());
+console.log(Mulheres);
+console.log(penerar());
