@@ -5,7 +5,7 @@ numM = 0
 minHeight = 0
 maxHeight = 0
 
-while pessoas <= 14:
+while pessoas <= 3:
     pessoas = pessoas + 1
     print (f"Pessoa {pessoas}")
     height = float(input("Altura: "))
