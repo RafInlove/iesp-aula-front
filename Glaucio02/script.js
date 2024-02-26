@@ -8,19 +8,16 @@ os seguintes resultados:
 let Pessoa1 = {
     altura: 178,
     sexo: "H",
-
 }
 
 let Pessoa2 = {
     altura: 179,
     sexo: "M",
-
 }
 
 let Pessoa3 = {
     altura: 167,
     sexo: "H",
-
 }
 
 Homens = [];
@@ -29,49 +26,69 @@ AlturasMasc = [];
 AlturasGeral = [];
 
 function maxHeight() {
-    return max(Pessoa1.altura, Pessoa2.altura, Pessoa3.altura)
+    return Math.max(Pessoa1.altura, Pessoa2.altura, Pessoa3.altura)
 }
 
 const separar = () => {
     if (Pessoa1.sexo === "H") {
         Homens.push(Pessoa1);
     }
-
     if (Pessoa1.sexo === "M") {
         Mulheres.push(Pessoa1)
     }
-
     if (Pessoa2.sexo === "H") {
         Homens.push(Pessoa2);
     }
-
     if (Pessoa2.sexo === "M") {
         Mulheres.push(Pessoa2)
     }
-
     if (Pessoa3.sexo === "H") {
         Homens.push(Pessoa3);
     }
-
     if (Pessoa3.sexo === "M") {
         Mulheres.push(Pessoa3)
     }
 }
 
-const penerar = () => {
-    for (let i = 0; i < Homens.lenght; i++) {
-        AlturasMasc.append(Homens[i.altura])
+function penerar() {
+    if (Homens.includes(Pessoa1)) {
+        AlturasMasc.push(Pessoa1.altura)
+        AlturasGeral.push(Pessoa1.altura)
+    }
+    if (Homens.includes(Pessoa2)) {
+        AlturasMasc.push(Pessoa2.altura)
+        AlturasGeral.push(Pessoa2.altura)
+    }
+    if (Homens.includes(Pessoa3)) {
+        AlturasMasc.push(Pessoa3.altura)
+        AlturasGeral.push(Pessoa3.altura)
+    }
+
+    if (Mulheres.includes(Pessoa1)) {
+        AlturasGeral.push(Pessoa1.altura)
+    }
+    if (Mulheres.includes(Pessoa2)) {
+        AlturasGeral.push(Pessoa2.altura)
+    }
+    if (Mulheres.includes(Pessoa3)) {
+        AlturasGeral.push(Pessoa3.altura)
     }
 }
+
 
 
 function media() {
-    for(let i = 0; i<Homens.lenght; i++) {
-        AlturasMasc.push(Homens.altura)
+    let sum = 0;
+    let n = AlturasMasc.lenght;
+
+    for (let i = 0; i < AlturasMasc.lenght; i++) {
+        sum = + AlturasMasc[i]
     }
-    return AlturasMasc
+
+    return sum / n;
 }
 
+let mediaHeights = media();
 
 
 
@@ -84,7 +101,7 @@ Pessoa2.sexo = prompt("E o sexo ?");
 Pessoa3.altura = prompt("Qual é a altura da terceira pessoa ? ");
 Pessoa3.sexo = prompt("E o sexo ?"); */
 
+
 separar();
-console.log(Homens);
-console.log(Mulheres);
-console.log(penerar());
+penerar();
+console.log(mediaHeights);
