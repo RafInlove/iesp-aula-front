@@ -366,5 +366,5 @@ separar();
 penerar();
 console.log(`A menor altura do grupo é: ${mineight()}`);
 console.log(`A maior altura é: ${maxHeight()}`);
-console.log(`A média de altura dos homens é: ${media()}`)
-console.log(`E o número de mulheres é: ${Mulheres.length}`)
+console.log(`A média de altura dos homens é: ${media()}`);
+console.log(`E o número de mulheres é: ${Mulheres.length}`);
