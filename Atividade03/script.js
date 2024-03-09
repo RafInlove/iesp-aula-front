@@ -6,7 +6,6 @@ somar(1,2,3,4);
 somar(2,3,4,5,6,7,8);
 somar(2,34,5,6,7,8,98,90,3,3,4,4,56,7,78,7,8,9);*/
 
-let nums = [];
 let total = 0;
 
 function somar() {
@@ -15,10 +14,10 @@ function somar() {
         total += arguments[i]
     }
 
-    return nums += total;
+    return total;
 
 }
 
 
 // Adicione quantos números quiser à soma !
-console.log(somar(1, 1));
+console.log(somar(1, 1, 5));
